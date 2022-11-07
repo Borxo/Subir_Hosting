@@ -1,0 +1,112 @@
+<!--
+    Pagina: Ej1Formularios.
+    Lenguaje: xhtml.
+    Autor: Borxo García.
+    Versión: 1.0V.
+-->
+
+<!-- DOCTYPE. Describe del tipo de documento -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <!--Cabecera.Incluye los metadatos -->
+    <head>
+        <title>Ej1Formularios</title>                                                            <!--Titulo de la pagina.-->
+	    <meta http-equiv="Content-Type" content="text/html; charsets=UTF-8" />                   <!--Tipo de caracteres utilizados.-->
+        
+        <!--Estilos-->
+        <style>
+            legend { 
+                    text-align: center;
+                   }
+        </style>
+
+    </head>
+
+    <!--Cuerpo. Parte principal de la pagina-->
+    <body>
+        <h2 style="text-align: center;">FORMULARIO</h2>                                             <!--Titulo de la pagina-->
+        
+        <!--Inicio del Formulario-->
+        <form action="FormularioEnviado.html" method="get">                                        <!--Vinculado a FormularioEnviado y con el metodo "get" para comprobar los datos enviados.--> 
+            
+            <!--Inicio de Datos Personales-->
+            <fieldset style="background-color:lightblue;">                                        <!--Recuadro de color azul.-->  
+
+                <legend>datos personales</legend>                                                   <!--Titulo de la sección.-->
+
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre"/>                                                   <!--Cuadro de Texto.-->
+
+                <br/>                                                                                <!--Salto de linea.-->
+
+                <label for="email">Email</label>
+                <input type="email" name="email" value="@"/>                                         <!--Cuadro para exclusivo E-mail.-->
+
+                <br/>                                                                                <!--Salto de linea.-->
+
+                <label for="población">Población</label>
+                <input type="text" name="Población"/>                                                <!--Cuadro de Texto.-->
+
+                <br/>                                                                                <!--Salto de linea.-->
+                <br/>                                                                                <!--Salto de linea.-->
+
+                <label for="sexo">Sexo</label>
+
+                <br/>                                                                                <!--Salto de linea.-->
+                <input type="radio" name="sexo" id="hombre"  value="hombre" checked="checked"/>      <!--Boton Radio elección unica, con dicha opción pre-seleccionada.-->
+                <label for="hombre">Hombre</label>
+
+                <br/>                                                                                <!--Salto de linea.-->
+
+                <input type="radio" name="sexo" id="mujer"  value="Mujer"/>                          <!--Salto de linea.-->
+                <label for="mujer">Mujer</label> 
+            </fieldset>
+            <!--Fin de Datos Personales-->
+            
+            <!--Inicio de Otros datos-->
+            <fieldset style="background-color:lightgreen;">                                       <!--Recuadro de color azul.-->
+
+                <legend> otros datos</legend>                                                       <!--Titulo de la sección.-->
+
+
+                <label for="viajes"> Frecuencia de los viajes</label>
+                    
+                <br/>                                                                                <!--Salto de linea.-->
+
+                <select name="viajes" id="viajes">                                                  <!--Lista desplegable con diversas opciones.-->
+                    <option value="poco">Poco</option>
+                    <option value="regular">Regular</option>
+                    <option value="normal">Normal</option>
+                    <option value="varias" selected="selected">Varias veces al dia</option>         <!--Opcion pre-seleccionada.-->
+                </select>
+
+                
+                <br/>                                                                                <!--Salto de linea.-->
+                <br/>                                                                                <!--Salto de linea.-->
+                
+                <label for="comentarios">Comentarios sobre su satisfación personal</label>
+                
+                <br/>                                                                                <!--Salto de linea.-->
+
+                <textarea name="comentarios" id="comentarios" cols="30" rows="10"></textarea>       <!--recuadro de texto con varias lineas.-->
+                
+                <br/>                                                                               <!--Salto de linea.-->
+                <br/>                                                                               <!--Salto de linea.-->
+               
+                <input type="checkbox" name="notificaciones" id="notificaciones" value="si" checked="checked"/>                 <!--Casilla de verificación, pre-seleccionada.-->
+                <label for="notificaciones">Deseo recibir notificaciones de las novedades en las lineas de autobuses.</label>
+                    
+            </fieldset>
+            <!--Fin de Otros datos-->
+
+            <!--Inicio de los botones enviar y borrar el formulario-->
+            <p style="text-align:center;">                              <!--Botones alineados en el centro.-->
+                <input type="submit" value="Enviar formulario"/>         <!--Botón de enviar.-->
+                <input type="reset" value="Borrar todo"/>                <!--Botón de Borrar todo el formulario.-->
+            </p>
+            <!--Fin de los botones enviar y borrar el formulario-->
+        </form>
+        <!--Fin del Formulario-->
+    </body>
+</html>
